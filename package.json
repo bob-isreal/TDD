@@ -1,0 +1,22 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "Test Driven development practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samfeolu/TDD.git"
+  },
+  "keywords": [
+    "TDD"
+  ],
+  "author": "Adedunye Adedayo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Samfeolu/TDD/issues"
+  },
+  "homepage": "https://github.com/Samfeolu/TDD#readme"
+}
