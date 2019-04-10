@@ -1,4 +1,4 @@
-const addIndefiniteNumbers = require("./app");
+const addIndefiniteNumbers = require("./indefinite");
 
 test("Add five numbers 2,3,4,5,5", () => {
   expect(addIndefiniteNumbers(2, 3, 4, 5, 5)).toBe(14);
