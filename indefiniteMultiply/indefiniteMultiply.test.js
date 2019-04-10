@@ -1,4 +1,4 @@
-const multiplyIndefiniteNumbers = require("./app");
+const multiplyIndefiniteNumbers = require("./indefiniteMultiply");
 
 test("Multiply five numbers 2,3,4,5,5", () => {
   expect(multiplyIndefiniteNumbers(2, 3, 4, 5, 5)).toBe(600);
