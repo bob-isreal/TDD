@@ -1,4 +1,4 @@
-const secondDividesFirst = require("./app");
+const secondDividesFirst = require("./division");
 
 test("Divide 100 by 10", () => {
   let num1 = 100,
