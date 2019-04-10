@@ -27,5 +27,5 @@ test("Divide a Number by a String", () => {
 test("Divide an Even Number by 2 (should not give float number)", () => {
   let num1 = 788,
     num2 = 2;
-  expect(secondDividesFirst(num1, num2)).toBe(num1 % num2);
+  expect(secondDividesFirst(num1, num2)).toBeCloseTo(394, 0);
 });
