@@ -1,11 +1,21 @@
 const got = require("got");
-
-console.log("working");
-
-/* got("https://api.github.com/users/samfeolu/repos").then(res => {
-  console.log(res.body);
-}); */
-got("https://ghibliapi.herokuapp.com/films").then(res => {
-  res.body;
-  console.log(res.body[0]);
-});
+async function githubRepo(username) {
+  let answer = await got(
+    "https://api.github.com/users/" + username + "/repos",
+    {
+      json: true
+    }
+  );
+  /* .then(res => {
+      res.body.forEach(element => {
+        console.log(element.name);
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    }); */
+  //console.log(data);
+  return await answer;
+}
+githubRepo("samfeolu");
+module.exports = githubRepo;
