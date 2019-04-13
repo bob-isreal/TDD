@@ -1,21 +1,18 @@
 const got = require("got");
-async function githubRepo(username) {
-  let answer = await got(
-    "https://api.github.com/users/" + username + "/repos",
-    {
-      json: true
-    }
-  );
-  /* .then(res => {
-      res.body.forEach(element => {
-        console.log(element.name);
-      });
-    })
-    .catch(err => {
-      console.log(err);
-    }); */
-  //console.log(data);
-  return await answer;
+function githubRepo(username) {
+  return got("https://api.github.com/users/" + username + "/repos", {
+    json: true
+  }).then(res => {
+    let answer = "";
+    res.body.forEach((value, index, arr) => {
+      if (index == arr.length - 1) {
+        answer += value.name + ".";
+      } else {
+        answer += value.name + ", ";
+      }
+    });
+    return answer;
+  });
 }
 githubRepo("samfeolu");
 module.exports = githubRepo;
